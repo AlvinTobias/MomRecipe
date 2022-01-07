@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MomRecipe: View {
+struct MomRecipeList: View {
     var RecipeModel:MomRecipeModel = MomRecipeModel()
     
     var body: some View {
@@ -56,6 +56,6 @@ struct MomRecipe: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MomRecipe()
+        MomRecipeList()
     }
 }

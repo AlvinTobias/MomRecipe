@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		ED5080F62784CDCA00B92DC4 /* MomRecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5080F52784CDCA00B92DC4 /* MomRecipeApp.swift */; };
-		ED5080F82784CDCA00B92DC4 /* MomRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5080F72784CDCA00B92DC4 /* MomRecipe.swift */; };
+		ED5080F82784CDCA00B92DC4 /* MomRecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5080F72784CDCA00B92DC4 /* MomRecipeList.swift */; };
 		ED5080FA2784CDCB00B92DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5080F92784CDCB00B92DC4 /* Assets.xcassets */; };
 		ED5080FD2784CDCB00B92DC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5080FC2784CDCB00B92DC4 /* Preview Assets.xcassets */; };
 		ED5081092784CFAF00B92DC4 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = ED5081082784CFAF00B92DC4 /* recipes.json */; };
 		ED50810B2784D00100B92DC4 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50810A2784D00100B92DC4 /* Recipe.swift */; };
 		ED50810D2784D1F600B92DC4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50810C2784D1F600B92DC4 /* DataService.swift */; };
 		ED50810F2784D66600B92DC4 /* MomRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50810E2784D66600B92DC4 /* MomRecipeModel.swift */; };
+		ED5B29052788AE92005FCD8F /* MomRecipeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5B29042788AE92005FCD8F /* MomRecipeTab.swift */; };
 		EDFA8D692786497C006FFD9D /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA8D682786497C006FFD9D /* RecipeDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ED5080F22784CDCA00B92DC4 /* MomRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MomRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5080F52784CDCA00B92DC4 /* MomRecipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomRecipeApp.swift; sourceTree = "<group>"; };
-		ED5080F72784CDCA00B92DC4 /* MomRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomRecipe.swift; sourceTree = "<group>"; };
+		ED5080F72784CDCA00B92DC4 /* MomRecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomRecipeList.swift; sourceTree = "<group>"; };
 		ED5080F92784CDCB00B92DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5080FC2784CDCB00B92DC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED5081082784CFAF00B92DC4 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
 		ED50810A2784D00100B92DC4 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		ED50810C2784D1F600B92DC4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		ED50810E2784D66600B92DC4 /* MomRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomRecipeModel.swift; sourceTree = "<group>"; };
+		ED5B29042788AE92005FCD8F /* MomRecipeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomRecipeTab.swift; sourceTree = "<group>"; };
 		EDFA8D682786497C006FFD9D /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,8 +102,9 @@
 		ED5081052784CDEA00B92DC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ED5080F72784CDCA00B92DC4 /* MomRecipe.swift */,
+				ED5080F72784CDCA00B92DC4 /* MomRecipeList.swift */,
 				EDFA8D682786497C006FFD9D /* RecipeDetail.swift */,
+				ED5B29042788AE92005FCD8F /* MomRecipeTab.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,9 +198,10 @@
 			files = (
 				ED50810F2784D66600B92DC4 /* MomRecipeModel.swift in Sources */,
 				ED50810B2784D00100B92DC4 /* Recipe.swift in Sources */,
-				ED5080F82784CDCA00B92DC4 /* MomRecipe.swift in Sources */,
+				ED5080F82784CDCA00B92DC4 /* MomRecipeList.swift in Sources */,
 				ED5080F62784CDCA00B92DC4 /* MomRecipeApp.swift in Sources */,
 				EDFA8D692786497C006FFD9D /* RecipeDetail.swift in Sources */,
+				ED5B29052788AE92005FCD8F /* MomRecipeTab.swift in Sources */,
 				ED50810D2784D1F600B92DC4 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

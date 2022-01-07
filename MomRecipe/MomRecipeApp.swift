@@ -11,7 +11,7 @@ import SwiftUI
 struct MomRecipeApp: App {
     var body: some Scene {
         WindowGroup {
-            MomRecipe()
+            MomRecipeTab()
         }
     }
 }
