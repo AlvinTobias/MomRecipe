@@ -11,7 +11,7 @@ struct MomRecipeTab: View {
     var body: some View {
         TabView
         {
-            Text("Work In Proogress...")
+            MomRecipeFeatured()
                 .tabItem {
                     ZStack
                     {
@@ -28,7 +28,7 @@ struct MomRecipeTab: View {
                         Text("Features")
                     }
                 }.tag(1)
-        }
+        }.environmentObject(MomRecipeModel())
         
         
     }

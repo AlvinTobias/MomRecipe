@@ -37,6 +37,12 @@ class DataService{
                 
                 for recipeID in MomrecipeJsondata {
                     recipeID.id = UUID()
+                    
+                    for indgrident in recipeID.ingredients
+                    {
+                        indgrident.id = UUID();
+                    }
+                    
                 }
                 
                 return MomrecipeJsondata

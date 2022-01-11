@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MomRecipeList: View {
-    var RecipeModel:MomRecipeModel = MomRecipeModel()
+   // @ObservedObject var RecipeModel:MomRecipeModel = MomRecipeModel()
+    @EnvironmentObject var RecipeModel:MomRecipeModel
     
     var body: some View {
         VStack
@@ -43,7 +44,7 @@ struct MomRecipeList: View {
 
                         
                     }
-            
+                    //.environment(\.defaultMinListRowHeight, 150)
                 
             
            

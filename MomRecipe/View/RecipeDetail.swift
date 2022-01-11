@@ -28,7 +28,7 @@ struct RecipeDetail: View {
                         Text("Ingredients").padding(.bottom,5).font(.title)
                         ForEach(0..<recipeDetail.ingredients.count ,id: \.self){
                             Index in
-                            Text("•" + recipeDetail.ingredients[Index]).padding(.bottom,1)
+                            Text("•" + recipeDetail.ingredients[Index].name).padding(.bottom,1)
                             
                         }
                         
