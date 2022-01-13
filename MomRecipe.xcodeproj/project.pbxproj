@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED02EE652790D82D00988EB7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02EE642790D82D00988EB7 /* Utilities.swift */; };
 		ED5080F62784CDCA00B92DC4 /* MomRecipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5080F52784CDCA00B92DC4 /* MomRecipeApp.swift */; };
 		ED5080F82784CDCA00B92DC4 /* MomRecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5080F72784CDCA00B92DC4 /* MomRecipeList.swift */; };
 		ED5080FA2784CDCB00B92DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5080F92784CDCB00B92DC4 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED02EE642790D82D00988EB7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		ED5080F22784CDCA00B92DC4 /* MomRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MomRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5080F52784CDCA00B92DC4 /* MomRecipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomRecipeApp.swift; sourceTree = "<group>"; };
 		ED5080F72784CDCA00B92DC4 /* MomRecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomRecipeList.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED02EE632790D80B00988EB7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ED02EE642790D82D00988EB7 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		ED5080E92784CDCA00B92DC4 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 		ED5080F42784CDCA00B92DC4 /* MomRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				ED02EE632790D80B00988EB7 /* Utilities */,
 				ED5081072784CDFF00B92DC4 /* Service */,
 				ED5081062784CDF600B92DC4 /* ViewModel */,
 				ED5081052784CDEA00B92DC4 /* View */,
@@ -205,6 +216,7 @@
 				ED6B9AA0278CDE11002E57B7 /* MomRecipeFeatured.swift in Sources */,
 				ED5080F62784CDCA00B92DC4 /* MomRecipeApp.swift in Sources */,
 				EDFA8D692786497C006FFD9D /* RecipeDetail.swift in Sources */,
+				ED02EE652790D82D00988EB7 /* Utilities.swift in Sources */,
 				ED5B29052788AE92005FCD8F /* MomRecipeTab.swift in Sources */,
 				ED50810D2784D1F600B92DC4 /* DataService.swift in Sources */,
 			);

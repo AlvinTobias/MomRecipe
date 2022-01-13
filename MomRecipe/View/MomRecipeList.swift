@@ -42,7 +42,7 @@ struct MomRecipeList: View {
                                             
                                         }
                                         Spacer()
-                                        
+                                        Divider()
                                     }
                                 }
                                 .padding(.bottom, 10.0)
