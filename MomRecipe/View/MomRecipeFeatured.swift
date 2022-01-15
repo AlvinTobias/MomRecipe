@@ -17,11 +17,7 @@ struct MomRecipeFeatured: View {
         
         VStack
         {
-            
-            
             Text("My Favorites").font(.title).bold().foregroundColor(.cyan).shadow(radius: 10)
-           
-            
             GeometryReader {
             geo in
            
@@ -52,24 +48,12 @@ struct MomRecipeFeatured: View {
                             RecipeDetail(recipeDetail: recipeModel.MomRecipeList[index])
                         }
                         .buttonStyle(PlainButtonStyle())
-//                        ZStack
-//                        {
-//                            Rectangle().foregroundColor(.white)
-//                            VStack
-//                            {
-//                                Image(recipeModel.MomRecipeList[index].image).resizable().clipped().aspectRatio(contentMode: .fill)
-//                                Text(recipeModel.MomRecipeList[index].name)
-//                            }
-//                        }
                             .frame(width: geo.size.width-40 , height: geo.size.height-100, alignment: .center).cornerRadius(10)
                             .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
                         
                     }
                     
                 }
-               
-                  
-                
                 
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
@@ -80,33 +64,39 @@ struct MomRecipeFeatured: View {
             VStack
             {
             Text("Preparation Time").bold()
-                Text(recipeModel.MomRecipeList[currentfaveSelectionValue].prepTime)
-                
-               let arrayhights = recipeModel.MomRecipeList[currentfaveSelectionValue].highlights
+               Text(recipeModel.MomRecipeList[currentfaveSelectionValue].prepTime)
+        
             Text("Highlights").bold()
-                
-               
-              //  ValuePr(recipeModel.MomRecipeList[currentfaveSelectionValue].highlights)
-                
-               // var arrayhights = recipeModel.MomRecipeList[currentfaveSelectionValue].highlights
-                
-               // Text(recipeModel.MomRecipeList[currentfaveSelectionValue].highlights[0])
-//                var highlit =""
-//                for index in 0..<recipeModel.MomRecipeList[currentfaveSelectionValue].highlights?.count{
-//                    var highlit += recipeModel.MomRecipeList[currentfaveSelectionValue].highlights[index]
-//                }
-//                Text(highlit)
-                
-               
+                Text(gethigh())
             }
             
         }
            
     }
+    func gethigh() -> String
+    {
+        var all = ""
+        let counter = recipeModel.MomRecipeList[currentfaveSelectionValue].highlights!.count
+        for index in 0..<counter
+        {
+            all += recipeModel.MomRecipeList[currentfaveSelectionValue].highlights![index]
+            if( index+1 != counter)
+            {
+                all += ","
+            }
+           
+        }
+        
+      return all
+            
+        }
+        
+       
+
     
     func getTheFirstIndexFeatured()
     {
-        var indexFirst = recipeModel.MomRecipeList.firstIndex { Res in
+        let indexFirst = recipeModel.MomRecipeList.firstIndex { Res in
             Res.featured
             
         }
@@ -118,6 +108,8 @@ struct MomRecipeFeatured: View {
     {
         isButtonTab = false
     }
+    
+    
    
     
 }
