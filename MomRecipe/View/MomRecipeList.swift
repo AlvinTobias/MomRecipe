@@ -35,9 +35,9 @@ struct MomRecipeList: View {
                                         Spacer()
                                         Text(A.name).font(.title3)
                                         Spacer()
-                                        HStack
+                                        VStack(alignment: .leading)
                                         {
-                                            Text("Servings:" + String(A.servings)).font(.subheadline)
+                                            Text(gethigh(hinglit: A.highlights!)).font(.subheadline)
                                             Text("Time:" + String(A.totalTime)).font(.subheadline)
                                             
                                         }
@@ -64,7 +64,28 @@ struct MomRecipeList: View {
             Spacer()
         }
         
+        
     }
+    func gethigh(hinglit : [String]) -> String
+    {
+        var all = ""
+        let counter = hinglit.count
+        for index in 0..<counter
+        {
+            all += hinglit[index]
+            if( index+1 != counter)
+            {
+                all += ", "
+            }
+           
+        }
+        
+      return all
+            
+        }
+   
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
