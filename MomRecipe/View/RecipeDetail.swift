@@ -74,7 +74,7 @@ struct RecipeDetail: View {
                 
             }
             
-        }.navigationBarTitle(recipeDetail.name)
+        }.navigationBarTitle(recipeDetail.name).font(Font.custom("Menlo Regular", size: 23))
     }
     
     

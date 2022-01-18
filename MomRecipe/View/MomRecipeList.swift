@@ -14,7 +14,7 @@ struct MomRecipeList: View {
     var body: some View {
         VStack
         {
-            Text("Mom's Recipe").font(.title).bold().foregroundColor(.cyan).shadow(radius: 10)
+            Text("Mom's Recipe").font(Font.custom("Menlo Regular", size: 23)).font(.title).bold().foregroundColor(.cyan).shadow(radius: 10)
             NavigationView
             {
                 ScrollView

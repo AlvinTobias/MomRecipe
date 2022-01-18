@@ -17,7 +17,9 @@ struct MomRecipeFeatured: View {
         
         VStack
         {
-            Text("My Favorites").font(.title).bold().foregroundColor(.cyan).shadow(radius: 10)
+            Text("My Favorites").font(Font.custom("Menlo Regular", size: 23))
+                .font(.title).bold().foregroundColor(.cyan).shadow(radius: 10)
+               // .font(Font.custom("Malayalam MN",23))
             GeometryReader {
             geo in
            
