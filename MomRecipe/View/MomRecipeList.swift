@@ -23,32 +23,65 @@ struct MomRecipeList: View {
                     LazyVStack(alignment : .leading)
                     {
                         ForEach (RecipeModel.MomRecipeList) { A in
-                            //List(RecipeModel.MomRecipeList) {A in
-                            NavigationLink {
-                                RecipeDetail(recipeDetail: A)
-                            } label: {
-                                HStack
-                                {
-                                    Image(A.image).resizable().frame(width: 100, height: 100, alignment: .leading).clipped().cornerRadius(20).scaledToFill()
-                                    VStack(alignment: .leading)
+                            
+                            if(RecipeModel.categoriesSeletected == nil ||
+                               RecipeModel.categoriesSeletected == "All Receipes" ||
+                               RecipeModel.categoriesSeletected != nil && RecipeModel.categoriesSeletected == A.category
+                            )
+                            {
+                                NavigationLink {
+                                    RecipeDetail(recipeDetail: A)
+                                } label: {
+                                    HStack
                                     {
-                                        Spacer()
-                                        Text(A.name).font(.title3)
-                                        Spacer()
+                                        Image(A.image).resizable().frame(width: 100, height: 100, alignment: .leading).clipped().cornerRadius(20).scaledToFill()
                                         VStack(alignment: .leading)
                                         {
-                                            Text(gethigh(hinglit: A.highlights!)).font(.subheadline)
-                                            Text("Time:" + String(A.totalTime)).font(.subheadline)
-                                            
+                                            Spacer()
+                                            Text(A.name).font(.title3)
+                                            Spacer()
+                                            VStack(alignment: .leading)
+                                            {
+                                                Text(gethigh(hinglit: A.highlights!)).font(.subheadline)
+                                                Text("Time:" + String(A.totalTime)).font(.subheadline)
+                                                
+                                            }
+                                            Spacer()
+                                            Divider()
                                         }
-                                        Spacer()
-                                        Divider()
                                     }
-                                }
-                                .padding(.bottom, 10.0)
-                                
-                                //}.navigationTitle("Isabel Recipe")
-                            }.navigationBarHidden(true)
+                                    .padding(.bottom, 10.0)
+                                    
+                                    //}.navigationTitle("Isabel Recipe")
+                                }.navigationBarHidden(true)
+                            }
+                            
+                            //List(RecipeModel.MomRecipeList) {A in
+//                            NavigationLink {
+//                                RecipeDetail(recipeDetail: A)
+//                            } label: {
+//                                HStack
+//                                {
+//                                    Image(A.image).resizable().frame(width: 100, height: 100, alignment: .leading).clipped().cornerRadius(20).scaledToFill()
+//                                    VStack(alignment: .leading)
+//                                    {
+//                                        Spacer()
+//                                        Text(A.name).font(.title3)
+//                                        Spacer()
+//                                        VStack(alignment: .leading)
+//                                        {
+//                                            Text(gethigh(hinglit: A.highlights!)).font(.subheadline)
+//                                            Text("Time:" + String(A.totalTime)).font(.subheadline)
+//
+//                                        }
+//                                        Spacer()
+//                                        Divider()
+//                                    }
+//                                }
+//                                .padding(.bottom, 10.0)
+//
+//                                //}.navigationTitle("Isabel Recipe")
+//                            }.navigationBarHidden(true)
                             
                         }
                     }.padding(.leading ,10)

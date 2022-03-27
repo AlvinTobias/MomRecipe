@@ -9,6 +9,9 @@ import Foundation
 class MomRecipeModel:ObservableObject{
     
     @Published var MomRecipeList:[Recipe] = [Recipe]()
+    @Published var categoriesList = Set<String>()
+    
+    @Published var categoriesSeletected : String?
     
     init()
     {
@@ -19,6 +22,15 @@ class MomRecipeModel:ObservableObject{
         // MomRecipeList = DataService().getRecipeInfo()
         
         self.MomRecipeList = DataService.getRecipeInfo()
+        
+        let catList = MomRecipeList.map { cate in
+            return cate.category
+                        
+        }
+       // self.categoriesList.update(with: "All Receipes")
+        self.categoriesList = Set(catList)
+        self.categoriesList.update(with: "All Receipes")
+        
     }
     static func getPortion(ingredient:ingredients, recipeServings:Int, targetServings:Int) -> String {
             

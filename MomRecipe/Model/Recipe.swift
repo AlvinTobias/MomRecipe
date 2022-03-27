@@ -20,6 +20,7 @@ class Recipe:Identifiable,Decodable {
     var highlights:[String]?
     var ingredients:[ingredients]
     var directions:[String]
+    var category:String
     
     
 }

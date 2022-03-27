@@ -8,27 +8,68 @@
 import SwiftUI
 
 struct MomRecipeTab: View {
+    @State var tabSelection = 0
+    
     var body: some View {
-        TabView
+       
+        TabView(selection: $tabSelection)
         {
-            MomRecipeFeatured()
-                .tabItem {
-                    ZStack
-                    {
-                        Image(systemName: "star.fill")
-                        Text("Features")
-                    }
-                }.tag(0)
-            
-               MomRecipeList()
-                .tabItem {
-                    ZStack
-                    {
-                        Image(systemName: "list.bullet")
-                        Text("Features")
-                    }
-                }.tag(1)
-        }.environmentObject(MomRecipeModel())
+                MomRecipeFeatured()
+                    .tabItem {
+                        ZStack
+                        {
+                            Image(systemName: "star.fill")
+                            Text("Features")
+                        }
+                    }.tag(0)
+                
+                MomRecipeCategory(TabSection: $tabSelection)
+                 .tabItem {
+                     ZStack
+                     {
+                         Image(systemName: "filemenu.and.selection")
+                         Text("Category")
+                     }
+                 }.tag(1)
+                
+                   MomRecipeList()
+                    .tabItem {
+                        ZStack
+                        {
+                            Image(systemName: "list.bullet")
+                            Text("List")
+                        }
+                    }.tag(2)
+            }.environmentObject(MomRecipeModel())
+        
+//        {
+//            MomRecipeFeatured()
+//                .tabItem {
+//                    ZStack
+//                    {
+//                        Image(systemName: "star.fill")
+//                        Text("Features")
+//                    }
+//                }.tag(0)
+//
+//            MomRecipeCategory()
+//             .tabItem {
+//                 ZStack
+//                 {
+//                     Image(systemName: "filemenu.and.selection")
+//                     Text("Category")
+//                 }
+//             }.tag(1)
+//
+//               MomRecipeList()
+//                .tabItem {
+//                    ZStack
+//                    {
+//                        Image(systemName: "list.bullet")
+//                        Text("List")
+//                    }
+//                }.tag(2)
+//        }.environmentObject(MomRecipeModel())
         
         
     }
